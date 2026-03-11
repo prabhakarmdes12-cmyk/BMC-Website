@@ -1,0 +1,334 @@
+Below is a **clear step-by-step manual to publish and update your website from the terminal** using your folder:
+
+```
+C:\Users\User\Documents\BMC
+```
+
+We will publish it using GitHub and GitHub Pages.
+
+This is the **exact workflow professional developers use**.
+
+---
+
+# PART 1 — One-time Setup (first time only)
+
+## 1️⃣ Install Git
+
+Download and install:
+
+Git
+[https://git-scm.com/download/win](https://git-scm.com/download/win)
+
+After installing, open **Command Prompt** and test:
+
+```bash
+git --version
+```
+
+You should see something like:
+
+```
+git version 2.x.x
+```
+
+---
+
+# PART 2 — Create a New GitHub Repository
+
+1️⃣ Go to
+
+[https://github.com](https://github.com)
+
+2️⃣ Click **New Repository**
+
+3️⃣ Repository name:
+
+```
+BMC-Website
+```
+
+4️⃣ Select
+
+```
+Public
+```
+
+5️⃣ Click **Create Repository**
+
+You will now see instructions like:
+
+```
+https://github.com/username/BMC-Website.git
+```
+
+Copy that link.
+
+---
+
+# PART 3 — Push Your Website From Terminal
+
+Now open **Command Prompt**.
+
+Navigate to your folder:
+
+```bash
+cd C:\Users\User\Documents\BMC
+```
+
+Check files:
+
+```bash
+dir
+```
+
+You should see:
+
+```
+index.html
+login.html
+portal.html
+assets
+```
+
+---
+
+## 1️⃣ Initialize Git
+
+```bash
+git init
+```
+
+Output:
+
+```
+Initialized empty Git repository
+```
+
+---
+
+## 2️⃣ Add all files
+
+```bash
+git add .
+```
+
+---
+
+## 3️⃣ Commit files
+
+```bash
+git commit -m "Initial BMC website upload"
+```
+
+---
+
+## 4️⃣ Connect your GitHub repository
+
+Replace `username` with your GitHub username.
+
+Example:
+
+```bash
+git remote add origin https://github.com/username/BMC-Website.git
+```
+
+---
+
+## 5️⃣ Push files
+
+```bash
+git branch -M main
+```
+
+Then:
+
+```bash
+git push -u origin main
+```
+
+GitHub may ask you to **login or enter token**.
+
+After push finishes your code is online.
+
+---
+
+# PART 4 — Enable GitHub Pages
+
+Go to your repository:
+
+```
+https://github.com/username/BMC-Website
+```
+
+Click
+
+```
+Settings
+```
+
+Then
+
+```
+Pages
+```
+
+Under **Branch**
+
+Select:
+
+```
+main
+```
+
+Then click
+
+```
+Save
+```
+
+---
+
+# PART 5 — Your Website Will Be Live
+
+Your site will appear at:
+
+```
+https://username.github.io/BMC-Website/
+```
+
+It usually takes **1–2 minutes**.
+
+---
+
+# PART 6 — How To Update Your Website
+
+Whenever you change files in:
+
+```
+C:\Users\User\Documents\BMC
+```
+
+Run these commands.
+
+---
+
+## Step 1 — Go to folder
+
+```bash
+cd C:\Users\User\Documents\BMC
+```
+
+---
+
+## Step 2 — Add changes
+
+```bash
+git add .
+```
+
+---
+
+## Step 3 — Commit changes
+
+Example:
+
+```bash
+git commit -m "Updated DPP section"
+```
+
+---
+
+## Step 4 — Push update
+
+```bash
+git push
+```
+
+Within **30–60 seconds** your website updates automatically.
+
+---
+
+# PART 7 — Real Developer Workflow
+
+Every update follows this pattern:
+
+```
+EDIT FILES
+     ↓
+git add .
+     ↓
+git commit
+     ↓
+git push
+     ↓
+GitHub updates site
+```
+
+---
+
+# PART 8 — Recommended Folder Structure
+
+Inside
+
+```
+BMC
+```
+
+keep this structure:
+
+```
+BMC
+
+index.html
+login.html
+portal.html
+
+assets
+   images
+   toppers
+   pdfs
+   css
+   js
+```
+
+This prevents broken links.
+
+---
+
+# PART 9 — Pro Tip (Very Useful)
+
+If you ever want to see **what changed before pushing**:
+
+```bash
+git status
+```
+
+or
+
+```bash
+git diff
+```
+
+---
+
+# PART 10 — Backup Your Website
+
+You can download full backup anytime from:
+
+```
+GitHub → Code → Download ZIP
+```
+
+---
+
+# 🚀 If you want, I can also show you a **much faster developer workflow**:
+
+Instead of typing commands every time, you can use **ONE command that updates your whole site**:
+
+```
+update-site.bat
+```
+
+Then updating the site becomes **1 click instead of 4 commands**.
+
+Developers use this for fast deployments.

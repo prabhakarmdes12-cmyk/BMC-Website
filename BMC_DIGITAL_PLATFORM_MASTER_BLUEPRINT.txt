@@ -1,0 +1,560 @@
+BHATIA MASTER CLASSES
+DIGITAL COACHING PLATFORM MASTER BLUEPRINT
+====================================================
+
+LIVE WEBSITE
+----------------------------------------------------
+
+Current Website
+https://prabhakarmdes12-cmyk.github.io/Bhatia-Master-Classes/
+
+Hosting
+GitHub Pages
+
+Technology
+HTML
+CSS
+JavaScript
+
+
+PROJECT OBJECTIVE
+----------------------------------------------------
+
+Build a complete digital coaching platform for:
+
+JEE Preparation
+NEET Preparation
+Foundation Classes
+
+The system will provide:
+
+Course information
+Daily Practice Problems
+Student portal
+Test series
+Admission system
+Automatic study content updates
+
+
+----------------------------------------------------
+MAIN WEBSITE STRUCTURE
+----------------------------------------------------
+
+Home Page
+
+Navigation Bar
+Hero Section
+Courses Section
+Today's DPP Highlight
+DPP Dashboard
+Student Toppers Gallery
+Student Results
+Online Admission Form
+Contact Section
+Footer
+
+
+----------------------------------------------------
+INDEX.HTML FEATURE STRUCTURE
+----------------------------------------------------
+
+SECTION 1
+Navigation Bar
+
+Menu
+
+Home
+Courses
+DPP
+Results
+Admission
+Student Login
+Contact
+
+
+SECTION 2
+Hero Section
+
+Title
+
+Bhatia Master Classes
+
+Subtitle
+
+JEE & NEET Coaching Excellence
+
+Buttons
+
+Download DPP
+View Courses
+
+
+SECTION 3
+Courses Section
+
+Course Cards
+
+JEE Preparation
+NEET Preparation
+Foundation Course
+Crash Course
+
+
+SECTION 4
+Today's DPP Highlight
+
+Purpose
+
+Show latest Daily Practice Problem.
+
+Display
+
+Subject
+Topic
+Download Button
+
+
+SECTION 5
+DPP Dashboard
+
+Subjects
+
+Maths
+Physics
+Chemistry
+Biology
+
+Each card shows
+
+Subject Name
+Download Button
+
+
+SECTION 6
+Student Toppers Gallery
+
+Display
+
+Topper Photo
+Name
+Rank
+
+
+Example
+
+Rahul Kumar
+AIR 245 JEE Advanced
+
+Ananya Sharma
+NEET 645
+
+
+SECTION 7
+Student Results
+
+Purpose
+
+Build trust for parents.
+
+
+Example Result Cards
+
+AIR 245 JEE Advanced
+AIR 612 JEE Main
+NEET 645 Score
+2500+ Students Enrolled
+
+
+SECTION 8
+Online Admission Form
+
+Platform
+
+Google Forms
+
+Fields
+
+Student Name
+Phone Number
+Email
+Course
+City
+Message
+
+
+Responses stored in Google Sheets.
+
+
+SECTION 9
+Contact Section
+
+Institute
+
+Bhatia Master Classes
+
+Location
+
+Ujjain
+Madhya Pradesh
+India
+
+Phone
+
+Institute contact number
+
+
+----------------------------------------------------
+STUDENT PORTAL SYSTEM
+----------------------------------------------------
+
+Files
+
+login.html
+portal.html
+
+
+Login Process
+
+Student clicks login
+
+Enter password
+
+Redirect to portal
+
+
+Example Password
+
+bmc2026
+
+
+----------------------------------------------------
+ALLEN STYLE STUDENT PORTAL
+----------------------------------------------------
+
+Sections
+
+Student Profile
+DPP List
+Test Series
+Solutions
+Announcements
+
+
+Sidebar Navigation
+
+Profile
+DPP
+Tests
+Solutions
+Logout
+
+
+Student Profile
+
+Photo
+Name
+Course Batch
+
+
+Example
+
+Rahul Kumar
+JEE 2026 Batch
+
+
+----------------------------------------------------
+PORTAL FEATURES
+----------------------------------------------------
+
+Sidebar Dashboard
+Downloadable Study Material
+Test Series Access
+Solution Access
+Student Profile
+Dark / Light Mode
+Animations
+
+
+----------------------------------------------------
+AUTO DPP SYSTEM
+----------------------------------------------------
+
+Purpose
+
+Update study material automatically.
+
+
+System Tools
+
+Google Drive
+Google Sheets
+Website JavaScript
+
+
+PROCESS
+
+Upload PDF to Google Drive.
+
+Add entry to Google Sheet.
+
+Website automatically updates DPP list.
+
+
+Example Sheet
+
+Date
+Subject
+Topic
+Link
+
+
+Example Row
+
+10 Mar
+Physics
+Current Electricity
+Drive Link
+
+
+----------------------------------------------------
+TODAY'S DPP AUTO FEATURE
+----------------------------------------------------
+
+Script reads latest sheet entry.
+
+Displays automatically on homepage.
+
+
+----------------------------------------------------
+SYSTEM ARCHITECTURE
+----------------------------------------------------
+
+FULL PLATFORM ARCHITECTURE
+
+                  STUDENT
+                     |
+                     |
+                 WEBSITE
+                     |
+                     |
+         ---------------------------
+         |                         |
+     STUDENT PORTAL          MAIN WEBSITE
+         |                         |
+         |                         |
+   STUDY MATERIAL              COURSE INFO
+         |
+         |
+    GOOGLE DRIVE
+         |
+         |
+   STUDY PDF FILES
+
+
+
+----------------------------------------------------
+AUTO DPP DATA FLOW
+----------------------------------------------------
+
+ADMIN
+
+Upload PDF
+
+↓
+
+Google Drive
+
+↓
+
+Add link to Google Sheet
+
+↓
+
+Website JavaScript reads sheet
+
+↓
+
+New DPP automatically appears on site
+
+
+
+----------------------------------------------------
+STUDENT PORTAL ARCHITECTURE
+----------------------------------------------------
+
+STUDENT LOGIN
+
+↓
+
+LOGIN PAGE
+
+↓
+
+AUTHENTICATION
+
+↓
+
+STUDENT DASHBOARD
+
+↓
+
+ACCESS
+
+DPP
+Tests
+Solutions
+
+
+
+----------------------------------------------------
+FUTURE MOBILE APP ARCHITECTURE
+----------------------------------------------------
+
+Mobile App
+
+Android
+iOS
+
+↓
+
+API SERVER
+
+↓
+
+DATABASE
+
+↓
+
+Content Delivery
+
+
+Mobile Features
+
+Video Lectures
+Test Series
+Performance Analytics
+Push Notifications
+
+
+
+----------------------------------------------------
+DIGITAL PLATFORM ROADMAP
+----------------------------------------------------
+
+Stage 1
+
+Website
+DPP System
+Admission Form
+
+
+Stage 2
+
+Student Portal
+Test Series
+
+
+Stage 3
+
+Online Tests
+Analytics
+
+
+Stage 4
+
+Mobile App
+
+
+Stage 5
+
+AI Learning Assistant
+
+
+
+----------------------------------------------------
+MARKET DEVELOPMENT COST (INDIA)
+----------------------------------------------------
+
+Basic Coaching Website
+
+₹10,000 – ₹30,000
+
+Typical educational websites in India can start around ₹10k–₹30k depending on design and pages. :contentReference[oaicite:0]{index=0}
+
+
+Professional Coaching Website
+
+₹35,000 – ₹3,50,000
+
+Online coaching websites with login systems and dashboards fall roughly in this range depending on features. :contentReference[oaicite:1]{index=1}
+
+
+Student Portal Development
+
+₹75,000 – ₹2,50,000
+
+Includes:
+
+Login
+Dashboard
+Material download
+Admin system
+
+
+
+Full LMS Platform
+
+₹3,00,000 – ₹10,00,000+
+
+
+EdTech Platform (Large)
+
+₹15 lakh – ₹65 lakh+
+
+Large platforms with mobile apps, live classes, analytics and AI can reach these budgets. :contentReference[oaicite:2]{index=2}
+
+
+
+----------------------------------------------------
+YOUR CURRENT PLATFORM VALUE
+----------------------------------------------------
+
+If developed by an agency, your platform concept would cost approximately
+
+₹1.5 lakh – ₹4 lakh
+
+
+Because it includes
+
+Website
+Student portal
+Content system
+Admission system
+Responsive design
+
+
+
+----------------------------------------------------
+FUTURE BUSINESS VALUE
+----------------------------------------------------
+
+With additional upgrades:
+
+Mobile App
+Online Tests
+Video Courses
+
+The platform could scale into a full EdTech system similar to
+
+Allen Digital
+Physics Wallah
+Unacademy
+
+
+----------------------------------------------------
+END OF DOCUMENT
+----------------------------------------------------
+
+Bhatia Master Classes
+Digital Coaching Platform Architecture
+Version 1

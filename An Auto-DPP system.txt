@@ -1,0 +1,172 @@
+An Auto-DPP system will let you upload a PDF once and the website will automatically show the newest DPP without editing index.html.
+
+We will use a simple no-backend system:
+
+Google Drive → store PDFs
+
+Google Sheets → list DPP links
+
+JavaScript → website reads the sheet and updates automatically
+
+This works perfectly with GitHub Pages.
+
+1️⃣ Create a Google Sheet (DPP Database)
+
+Create a sheet called:
+
+BMC_DPP
+
+Columns:
+
+Date | Subject | Topic | PDF
+
+Example rows:
+
+10 Mar | Physics | Current Electricity | https://drive.google.com/file/d/XXXX/view
+11 Mar | Maths | Definite Integration | https://drive.google.com/file/d/YYYY/view
+12 Mar | Chemistry | Aldehydes | https://drive.google.com/file/d/ZZZZ/view
+2️⃣ Publish Sheet to Web
+
+In Google Sheets:
+
+File
+↓
+Share
+↓
+Publish to Web
+
+Choose:
+
+Entire Document
+Format → CSV
+
+You will get a link like:
+
+https://docs.google.com/spreadsheets/d/XXXX/export?format=csv
+
+Copy it.
+
+3️⃣ Add Auto-DPP Section in index.html
+
+Place this where your DPP section is.
+
+<section id="auto-dpp" class="py-5 bg-light">
+
+<div class="container">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold">📘 Latest Daily Practice Problems</h2>
+<p class="text-muted">Updated automatically</p>
+</div>
+
+<div id="dpp-list" class="row g-4"></div>
+
+</div>
+
+</section>
+4️⃣ Add JavaScript Auto Loader
+
+Add this before </body> in your index.html.
+
+Replace the link with your sheet CSV link.
+
+<script>
+
+const sheetURL =
+"https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/export?format=csv";
+
+fetch(sheetURL)
+.then(res => res.text())
+.then(data => {
+
+const rows = data.split("\n").slice(1);
+
+let html = "";
+
+rows.forEach(row => {
+
+let cols = row.split(",");
+
+let date = cols[0];
+let subject = cols[1];
+let topic = cols[2];
+let pdf = cols[3];
+
+html += `
+<div class="col-md-4">
+<div class="card shadow-sm border-0 h-100">
+
+<div class="card-body text-center">
+
+<h5 class="fw-bold text-primary">${subject}</h5>
+
+<p>${topic}</p>
+
+<small class="text-muted">${date}</small>
+
+<br><br>
+
+<a href="${pdf}" target="_blank"
+class="btn btn-warning btn-sm">
+
+Download DPP
+
+</a>
+
+</div>
+</div>
+</div>
+`;
+
+});
+
+document.getElementById("dpp-list").innerHTML = html;
+
+});
+
+</script>
+5️⃣ How You Update DPP Now
+
+Instead of editing the website:
+
+1️⃣ Upload PDF to Google Drive
+2️⃣ Copy the share link
+3️⃣ Add a new row in the Google Sheet
+
+Example:
+
+15 Mar | Physics | Magnetism | Drive Link
+
+Website updates automatically.
+
+No GitHub update needed.
+
+6️⃣ Optional Upgrade (Recommended)
+
+Create 3 sheets:
+
+DPP
+Solutions
+Mock Tests
+
+Then your student portal can load all automatically.
+
+7️⃣ Final System Architecture
+Teacher uploads PDF
+        ↓
+Google Drive
+        ↓
+Link added in Google Sheet
+        ↓
+Website reads sheet
+        ↓
+DPP appears automatically
+8️⃣ What This Achieves
+
+Your coaching site becomes similar to digital systems used by:
+
+Allen Career Institute
+
+Physics Wallah
+
+because content updates without coding.

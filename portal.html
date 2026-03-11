@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>BMC Student Portal</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f5f7fb;
+transition:0.3s;
+}
+
+.dark{
+background:#121212;
+color:white;
+}
+
+.sidebar{
+width:220px;
+height:100vh;
+background:#1B3A6B;
+color:white;
+position:fixed;
+padding:20px;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+margin:14px 0;
+}
+
+.main{
+margin-left:240px;
+padding:30px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+margin-bottom:20px;
+}
+
+.dark .card{
+background:#1e1e1e;
+}
+
+button{
+background:#1B3A6B;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>BMC Portal</h2>
+
+<a href="#profile">Profile</a>
+<a href="#dpp">DPP</a>
+<a href="#tests">Tests</a>
+<a href="#solutions">Solutions</a>
+
+<button onclick="toggleMode()">Dark Mode</button>
+
+</div>
+
+
+<div class="main">
+
+<h1>Student Dashboard</h1>
+
+<div id="profile" class="card">
+
+<h3>Rahul Kumar</h3>
+<p>Course: JEE 2026 Batch</p>
+
+</div>
+
+<div id="dpp" class="card">
+
+<h2>DPP</h2>
+
+<ul>
+
+<li>Physics DPP 01 <a href="#">Download</a></li>
+<li>Maths DPP 01 <a href="#">Download</a></li>
+<li>Chemistry DPP 01 <a href="#">Download</a></li>
+
+</ul>
+
+</div>
+
+
+<div id="tests" class="card">
+
+<h2>Test Series</h2>
+
+<ul>
+
+<li>Mock Test 01 <a href="#">Download</a></li>
+<li>Mock Test 02 <a href="#">Download</a></li>
+
+</ul>
+
+</div>
+
+
+<div id="solutions" class="card">
+
+<h2>Solutions</h2>
+
+<ul>
+
+<li>DPP 01 Solution <a href="#">Download</a></li>
+<li>Test 01 Solution <a href="#">Download</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleMode(){
+
+document.body.classList.toggle("dark")
+
+}
+
+</script>
+
+</body>
+</html>
